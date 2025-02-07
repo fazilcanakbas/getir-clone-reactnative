@@ -12,7 +12,7 @@ function Index() {
           <Image style={styles.Image} source={{ uri: "https://cdn.getir.com/misc/emoji/house.png" }} />
           <View style={styles.headerOneView}>
             <Text style={{fontWeight:'600',fontSize:16}}>Ev</Text>
-            <Text style= {{fontWeight:'500',fontSize:13,color:'#6E7480',marginLeft:6,marginRight:3}}>Akdeniz Üniversitesi Teknik ....</Text>
+            <Text style= {{fontWeight:'500',fontSize:13,color:'#6E7480',marginLeft:6,marginRight:3}}>Akdeniz Üniversitesi Teknik Bilimler....</Text>
             <Entypo name="chevron-small-right" size={25} color="#5D3EBD" />
           </View>
           <View style = {styles.headertwo}>

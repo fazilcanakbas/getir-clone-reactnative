@@ -8,6 +8,8 @@ import { ThemedView } from '@/components/ThemedView';
 import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'react-native';
 import RootNavigator from '@/src/navigators/RootNavigator';
+import { Provider } from 'react-redux';
+import store from "../../src/redux/store"
 
 LogBox.ignoreAllLogs();
 
@@ -20,9 +22,11 @@ LogBox.ignoreAllLogs();
 
 export default function app() {
   return (
+    <Provider store={store}>
     <NavigationContainer   independent = {true}>
       <RootNavigator/>
     </NavigationContainer>
+    </Provider>
   );
 }
 

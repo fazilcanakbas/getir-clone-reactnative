@@ -2,17 +2,21 @@ import React from 'react'
 import {View,Text,Image,ScrollView,TouchableOpacity,Dimensions} from 'react-native'
 import Entypo from '@expo/vector-icons/Entypo';
 import { Product } from '@/src/models';
+import { RootParamList } from '../../../types'; 
 import { useNavigation } from 'expo-router';
 import { NavigationProp } from '@react-navigation/native';
+import { connect } from 'react-redux';
+import *as actions from "../../redux/actions/cartActions"
+import index from '@/src/screens/ProductDetailsScreen';
 
 const {width,height} =Dimensions.get ('window')
-
-type ProductItemType={
-    item: Product
-
-}
-export default function index({item}:ProductItemType) {
-    const navigation = useNavigation()
+type ProductItemProps = {
+    item: Product;
+    addItemToCart: (a: Product) => void;
+  };
+  
+  const ProductItem = ({ item, addItemToCart }: ProductItemProps) => {
+    const navigation = useNavigation<NavigationProp<RootParamList, 'ProductDetails'>>();
 
   return (
     <TouchableOpacity
@@ -24,7 +28,7 @@ export default function index({item}:ProductItemType) {
         marginTop:12,
         height:height*0.23,
         marginLeft:12,
-        marginBottom:10}}>
+        marginBottom:20}}>
         <Image style={{
         width:width*0.28,
         height:width*0.28,
@@ -35,7 +39,7 @@ export default function index({item}:ProductItemType) {
         <View style={{
             flexDirection:'row',
             marginTop:10,
-            alignItems:'center'}}>
+            alignItems:'center',}}>
             <Text style={{
                 fontSize:12,
                 color:"#747990",textDecorationLine:'line-through'}}>
@@ -55,7 +59,9 @@ export default function index({item}:ProductItemType) {
             {item.name}
         </Text>
         <Text style={{color:'#747990', fontSize:12,marginTop:4,fontWeight:500}}>{item.miktar}</Text>
-        <View style={{
+        <TouchableOpacity onPress={() => {
+            console.log("Adding item to cart:", item); // Log ile kontrol edin
+            addItemToCart(item)}} style={{
             width:35,
             height:35,
             shadowRadius:5,
@@ -70,8 +76,17 @@ export default function index({item}:ProductItemType) {
             alignItems:'center',}}>
         <Entypo name="plus" size={24} color="#5C3EBC"/>
 
-        </View>
+        </TouchableOpacity>
     </TouchableOpacity>
   )
 }
+// Tipleri ekleyin:
+const mapDispatchToProps = (dispatch: any) => {
+    return {
+      addItemToCart: (product: Product) =>
+        dispatch(actions.addToCart({ quantity: 1, product })) // doğru tip
+    };
+  };
 
+
+export default connect(null, mapDispatchToProps)(index);
