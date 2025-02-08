@@ -39,7 +39,7 @@ Ardından aşağıdaki seçeneklerden biriyle çalıştırabilirsiniz:
 
 ## 🤝 Getir Application Clone
 
-(https://github.com/fazilcanakbas/getir-clone-reactnative/issues/1#issuecomment-2645961851)
+![Image](https://github.com/user-attachments/assets/798b5df1-dd5b-4917-a946-ccccaaff6380)
 
 
 
