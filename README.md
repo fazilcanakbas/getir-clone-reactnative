@@ -37,9 +37,14 @@ Ardından aşağıdaki seçeneklerden biriyle çalıştırabilirsiniz:
 - **Redux / Context API** *(Opsiyonel)* - Durum yönetimi
 - **Firebase / Supabase** *(Opsiyonel)* - Backend entegrasyonu
 
-## 🤝 Katkıda Bulunma
+## 🤝 Getir Clone Uygulamasından Resimler 
 
-Katkıda bulunmak isterseniz **fork** alıp geliştirmelerinizi **pull request** olarak gönderebilirsiniz. Her türlü geri bildirime açığız! 😊
+
+
+
+
+
+
 
 ---
 **Fazıl Can Akbaş** tarafından geliştirilmiştir. 🚀
