@@ -8,7 +8,7 @@ Bu proje, Getir uygulamasının temel işlevlerini taklit eden bir **React Nativ
 - 🔍 **Arama Fonksiyonu:** Ürünleri isme göre filtreleyebilirsiniz.
 - 🛍 **Sepete Ekleme:** Kullanıcılar ürünleri sepete ekleyebilir ve güncelleyebilir.
 - 📦 **Sipariş Geçmişi:** Geçmiş siparişlerinizi inceleyebilirsiniz.
-- 🌙 **Karanlık Mod Desteği** *(Yakında!)*
+
 
 ## 🚀 Kurulum ve Çalıştırma
 
@@ -39,7 +39,10 @@ Ardından aşağıdaki seçeneklerden biriyle çalıştırabilirsiniz:
 
 ## 🤝 Getir Clone Uygulamasından Resimler 
 
-
+![Image](https://github.com/user-attachments/assets/70349556-021e-4b57-9f0a-4a193783031c)
+![Image](https://github.com/user-attachments/assets/0cc6561a-9fdb-493e-aea9-aaf4ff922e64)
+![Image](https://github.com/user-attachments/assets/d886a38c-8130-485e-9657-70c6cddd7141)
+![Image](https://github.com/user-attachments/assets/b34a6d25-64ef-4359-b093-8c3e431b1497)
 
 
 
