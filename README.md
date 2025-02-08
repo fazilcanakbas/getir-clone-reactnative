@@ -37,13 +37,9 @@ Ardından aşağıdaki seçeneklerden biriyle çalıştırabilirsiniz:
 - **Redux / Context API** *(Opsiyonel)* - Durum yönetimi
 - **Firebase / Supabase** *(Opsiyonel)* - Backend entegrasyonu
 
-## 🤝 Getir Clone Uygulamasından Resimler 
+## 🤝 Getir Application Clone
 
-![Image](https://github.com/user-attachments/assets/70349556-021e-4b57-9f0a-4a193783031c)
-![Image](https://github.com/user-attachments/assets/0cc6561a-9fdb-493e-aea9-aaf4ff922e64)
-![Image](https://github.com/user-attachments/assets/d886a38c-8130-485e-9657-70c6cddd7141)
-![Image](https://github.com/user-attachments/assets/b34a6d25-64ef-4359-b093-8c3e431b1497)
-
+(https://github.com/fazilcanakbas/getir-clone-reactnative/issues/1#issuecomment-2645961851)
 
 
 
