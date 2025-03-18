@@ -34,8 +34,8 @@ Ardından aşağıdaki seçeneklerden biriyle çalıştırabilirsiniz:
 - **React Native** - Mobil geliştirme
 - **Expo** - Hızlı geliştirme ortamı
 - **React Navigation** - Sayfalar arası geçiş
-- **Redux / Context API** *(Opsiyonel)* - Durum yönetimi
-- **Firebase / Supabase** *(Opsiyonel)* - Backend entegrasyonu
+- **Redux - Durum yönetimi
+
 
 ## 🤝 Getir Application Clone
 
