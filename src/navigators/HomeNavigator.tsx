@@ -1,6 +1,6 @@
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { NavigationAction, useNavigation, getFocusedRouteNameFromRoute } from '@react-navigation/native';
+import { getFocusedRouteNameFromRoute } from '@react-navigation/native';
 import HomeScreen from "../screens/HomeScreen";
 import CategoryFilterScreen from "../screens/CategoryFilterScreen";
 import { Image, StatusBar, View, Text, TouchableOpacity,Dimensions } from 'react-native';
@@ -8,33 +8,30 @@ import ProductDetailsScreen from "../screens/ProductDetailsScreen";
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useIsFocused } from "@react-navigation/native";
-import { StackNavigationProp } from '@react-navigation/stack';
 
 
 import { RouteProp } from '@react-navigation/native';
-import CartScreen from "../screens/CartScreen"
 import Feather from '@expo/vector-icons/Feather';
-import { Product } from '../models';
+import { Category, Product } from '../models';
+import CartScreen from '../screens/CartScreen';
 const {width,height} = Dimensions.get('window')
 
 type MyStackParamList = {
   Home: undefined;
-  CategoryDetails: undefined;
-  ProductDetails: { product: Product }; // Burada parametreyi belirtiyoruz
+  CategoryDetails: { category: Category };
+  ProductDetails: { product: Product }; 
   CartScreen: undefined;
 };
 
-const tabHiddenRoutes = ['ProductDetails', 'CartScreen']; // Bu ekranlarda gizleyeceğiz
+const tabHiddenRoutes = ['ProductDetails', 'CartScreen']; 
 const Stack = createStackNavigator<MyStackParamList>();
 
 function MyStack({ navigation, route }: any) {
   React.useEffect(() => {
     const routeName = getFocusedRouteNameFromRoute(route) ?? 'Home';
     if (tabHiddenRoutes.includes(routeName)) {
-      // Alt navigasyon çubuğunu gizle
       navigation.getParent()?.setOptions({ tabBarStyle: { display: 'none' } });
     } else {
-      // Alt navigasyon çubuğunu göster
       navigation.getParent()?.setOptions({ tabBarStyle: { display: 'flex' } });
     }
   }, [navigation, route]);
@@ -62,7 +59,7 @@ function MyStack({ navigation, route }: any) {
 
         <Stack.Screen
           name="CategoryDetails"
-          getComponent={CategoryFilterScreen}
+          component={CategoryFilterScreen}
           options={({ navigation }) => ({
             headerTintColor: "white",
             headerBackTitleVisible: false,

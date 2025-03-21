@@ -4,13 +4,11 @@ import { REMOVE_FROM_CART } from "../constants";
 import { CLEAR_CART } from "../constants";
 
 
-// action tipinin doğru tanımlandığından emin olun
 export const addToCart = (payload: { quantity: number; product: Product }) => ({
   type: ADD_TO_CART,
   payload
 });
 
-// Action tipi tanımlaması:
 interface AddToCartAction {
   type: typeof ADD_TO_CART;
   payload: { quantity: number; product: Product };

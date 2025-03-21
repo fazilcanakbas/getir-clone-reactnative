@@ -11,7 +11,7 @@ const TypeBox = ({setCat,item,active}:{setCat:any,item:string,active:string}) =>
     )
 }
 export default function index() {
-    const [category,setCategory] = useState<String>("Birlikte İyi Gider")
+    const [category,setCategory] = useState<string>("Birlikte İyi Gider")
   return (
    <View>
     <ScrollView style={{width:'100%',height:height*0.065,flexDirection:'row',paddingVertical:height*0.014,backgroundColor:'white',paddingHorizontal:8,

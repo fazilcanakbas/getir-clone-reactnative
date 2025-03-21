@@ -12,7 +12,7 @@ type FazilcanProps = {
 };
 
 function index({ item }: FazilcanProps) {
-  // `useNavigation` fonksiyonunu çağırarak kullanın ve türünü belirtin
+ 
   const navigation = useNavigation<NavigationProp<RootParamList>>();
 
   return (

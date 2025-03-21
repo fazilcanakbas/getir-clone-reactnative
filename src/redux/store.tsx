@@ -5,15 +5,13 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import cartItems from "./reducers/cartItems";
 import { Product } from "../models";
 
-// CartItem tipini tanımlayın
 export interface CartItem {
   product: Product;
   quantity: number;
 }
 
-// RootState tipi:
 export interface RootState {
-  cartItems: CartItem[]; // cartItems array tipinde olacak
+  cartItems: CartItem[]; 
 }
 
 const reducers = combineReducers({

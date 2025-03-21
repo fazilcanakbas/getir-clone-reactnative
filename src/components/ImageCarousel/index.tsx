@@ -6,9 +6,9 @@ const { width, height } = Dimensions.get('window');
 export default function Index({ images }: { images: string[] }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const onViewRef = React.useRef((viewableItems) => {
-    if (viewableItems.viewableItems.length > 0) {
-      setActiveIndex(viewableItems.viewableItems[0].index || 0);
+  const onViewRef = React.useRef((info: { viewableItems: Array<{ index: number | null }> }) => {
+    if (info.viewableItems.length > 0) {
+      setActiveIndex(info.viewableItems[0].index ?? 0);
     }
   });
 
@@ -20,7 +20,7 @@ export default function Index({ images }: { images: string[] }) {
         alignItems: 'center',
         width: '100%',
         backgroundColor: 'white',
-        height: height * 0.32, // Yüksekliği ayarladık
+        height: height * 0.32, 
         paddingLeft:60,
         paddingRight:40,
         paddingTop: 25,
@@ -28,19 +28,19 @@ export default function Index({ images }: { images: string[] }) {
     >
       <FlatList
         data={images}
-        style={{ width: '100%', height: height * 0.2 }} // Resim boyutunu daha küçük yapıyoruz
+        style={{ width: '100%', height: height * 0.2 }} 
         renderItem={({ item }) => (
           <View style={{ alignItems: 'center' }}>
             <Image
               source={{ uri: item }}
-              style={{ width: width * 0.8, height: height * 0.2 }} // Resmin genişliğini %80, yüksekliğini %20'ye ayarlıyoruz
+              style={{ width: width * 0.8, height: height * 0.2 }} 
               resizeMode="contain"
             />
           </View>
         )}
         horizontal
         showsHorizontalScrollIndicator={false}
-        snapToInterval={width * 0.5} // Resimlerin ekranın %80'ine uyumlu şekilde kaymasını sağlar
+        snapToInterval={width * 0.5} 
         snapToAlignment={"center"}
         decelerationRate={"fast"}
         viewabilityConfig={viewConfigRef.current}

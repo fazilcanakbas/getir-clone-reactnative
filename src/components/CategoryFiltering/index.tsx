@@ -29,8 +29,7 @@ const CategoryBox = ({ active, item, onPress }: { active: string; item: string; 
 
 function Index({ category }: { category: Category }) {
   const [categories, setCategories] = useState(categoriesGetir);
-  const [activeCategory, setActiveCategory] = useState<string>(''); // Başlangıçta boş
-
+  const [activeCategory, setActiveCategory] = useState<string>(''); 
   return (
     <ScrollView
       style={{ width: '100%' }}
@@ -44,7 +43,7 @@ function Index({ category }: { category: Category }) {
           key={item.name}
           item={item.name}
           active={activeCategory}
-          onPress={() => setActiveCategory(item.name)} // Seçilen kategori
+          onPress={() => setActiveCategory(item.name)} 
         />
       ))}
     </ScrollView>

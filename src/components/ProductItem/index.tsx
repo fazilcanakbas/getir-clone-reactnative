@@ -60,7 +60,7 @@ type ProductItemProps = {
         </Text>
         <Text style={{color:'#747990', fontSize:12,marginTop:4,fontWeight:500}}>{item.miktar}</Text>
         <TouchableOpacity onPress={() => {
-            console.log("Adding item to cart:", item); // Log ile kontrol edin
+            console.log("Adding item to cart:", item);
             addItemToCart(item)}} style={{
             width:35,
             height:35,
@@ -80,11 +80,10 @@ type ProductItemProps = {
     </TouchableOpacity>
   )
 }
-// Tipleri ekleyin:
 const mapDispatchToProps = (dispatch: any) => {
     return {
       addItemToCart: (product: Product) =>
-        dispatch(actions.addToCart({ quantity: 1, product })) // doğru tip
+        dispatch(actions.addToCart({ quantity: 1, product })) 
     };
   };
 

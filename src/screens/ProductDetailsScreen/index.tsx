@@ -7,7 +7,15 @@ import DetailProperty from '../../components/DetailProperty';
 import CardButton from '../../components/CardButton';
 import { ScrollView } from 'react-native-gesture-handler';
 
-function index(props) {
+interface Props {
+  route: {
+    params?: {
+      product?: Product;
+    };
+  };
+}
+
+function index(props: Props) {
   const [product, setProduct] = useState<Product | null>(null);
 
   useEffect(() => {
